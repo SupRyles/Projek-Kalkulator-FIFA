@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator Poin Ranking FIFA</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>FIFA Ranking Points Calculator</h1>
+
+      <p class="subtitle">
+        Berikut adalah formula poin yang digunakan oleh FIFA.
+        <br />
+        Formula Poin FIFA: P = Pbefore + I x (W - We)
+      </p>
+
+      <p>
+        Link Poin FIFA dapat dilihat dalam tautan berikut:
+        <a
+          href="https://inside.fifa.com/fifa-world-ranking/men"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          FIFA Men's World Ranking
+        </a>
+      </p>
+
+      <div class="cards">
+        <!-- CARD HOME -->
+        <div class="card">
+          <h2>Tim Home</h2>
+
+          <label>Negara Home</label>
+          <input
+            type="text"
+            placeholder="Masukkan nama negara"
+            id="homeCountry"
+          />
+
+          <label>Poin FIFA Home</label>
+          <input
+            type="number"
+            placeholder="Masukkan poin negara"
+            id="homePoints"
+          />
+        </div>
+
+        <!-- CARD AWAY -->
+        <div class="card">
+          <h2>Tim Away</h2>
+
+          <label>Negara Away</label>
+          <input
+            type="text"
+            placeholder="Masukkan nama negara"
+            id="awayCountry"
+          />
+
+          <label>Poin FIFA Away</label>
+          <input
+            type="number"
+            placeholder="Masukkan poin negara"
+            id="awayPoints"
+          />
+        </div>
+
+        <!-- CARD MATCH -->
+        <div class="card">
+          <h2>Detail Pertandingan</h2>
+
+          <label>Jenis Pertandingan</label>
+          <select id="tipeMatch">
+            <option value="5">Friendly Match (luar kalender FIFA)</option>
+            <option value="10">Friendly Match (dalam kalender FIFA)</option>
+            <option value="15">Fase Grup Nations League</option>
+            <option value="20">Play-off & Final Nations League</option>
+            <option value="25">Kualifikasi Konfederasi & Piala Dunia</option>
+            <option value="35">
+              Turnamen Konfederasi (Fase Grup s/d Babak 16 besar)
+            </option>
+            <option value="40">
+              Turnamen Konfederasi (Perempat Final s/d Final)
+            </option>
+            <option value="50">
+              Piala Dunia (Fase Grup s/d Babak 16 besar)
+            </option>
+            <option value="60">Piala Dunia (Perempat Final s/d Final)</option>
+          </select>
+
+          <label>Hasil Pertandingan</label>
+
+          <div class="pilihan">
+            <label>
+              <input type="radio" name="hasil" value="home" checked />
+              Home Menang
+            </label>
+
+            <label>
+              <input type="radio" name="hasil" value="away" />
+              Away Menang
+            </label>
+
+            <label>
+              <input type="radio" name="hasil" value="draw" />
+              Seri
+            </label>
+          </div>
+
+          <button onclick="hitungPoin()">HITUNG POIN FIFA</button>
+
+          <div id="hasilmatch" class="result"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/index.js"></script>
+  </body>
+
+  <footer>
+    <p>Made by Ryles. IG: @ryl.hns</p>
+  </footer>
+</html>
