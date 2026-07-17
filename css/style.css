@@ -6,7 +6,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, #1e1b4b, #4c1d95);
+  background: linear-gradient(120deg, #35393c, #a4d8ff);
   color: white;
   padding: 30px;
 }
@@ -40,7 +40,7 @@ a {
 }
 
 .card {
-  background: #312e81;
+  background: #7298c7;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
